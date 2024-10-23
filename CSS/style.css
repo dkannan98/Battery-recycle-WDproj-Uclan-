@@ -1,0 +1,198 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header{
+    height:100px;
+    background-color: #4CAF50;
+}
+
+.nav-bar{
+    color: #37474F;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+
+.logo{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 75px;
+    color: green;
+}
+
+.options{
+    font-size: 20px;
+    color:#ffffff;
+    width: 70% ;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.options :hover{
+    color:black;
+    font-weight: 700;
+    transition: font-weight 0.3s ease-in, color 0.3s ease-in;
+}
+
+
+.search{
+    position: relative;
+    display: flex;
+    color:black;
+    border-radius: 10px;
+    background-color:white;
+    width:250px;
+    height:36px;
+    align-items: center;
+    text-align: center;
+}
+
+.searchLogo{
+    margin-left: 6px;
+
+}
+.searchInput{
+    border: None;
+    outline: none;
+    text-align: center;
+    align-content: center;
+    display: inline-block;
+}
+
+input:focus::placeholder {
+    color: transparent; 
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 10px;
+    font-size: medium;
+}
+
+
+.footer-section h4 {
+    font-weight: 200;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.footer-section h4:hover{
+    font-weight: 700;
+    color: black;
+    transition: font-weight 0.3s ease-in, color 0.3s ease-in;
+}
+.links a {
+    display: flex;
+    flex-direction:column ;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+.social-icon{
+    font-size: 25px;
+}
+
+.social-media a {
+    margin-left: 8px;
+     
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;    
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    .options {
+        display: none; /* Hide nav options by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #4CAF50;
+        padding: 20px 0;
+    }
+
+    /* Show the menu when the hamburger is clicked */
+    .options.active {
+        display: flex;
+    }
+
+    /* Hamburger menu for small screens */
+    .menu-icon {
+        display: block;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    .search {
+        display: none; /* Optionally hide the search bar on small screens */
+    }
+
+    .logo {
+        font-size: 45px;
+    }
+
+    .head-elements {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Hide hamburger menu on larger screens */
+    .menu-icon {
+        display: none;
+    }
+
+    .search {
+        display: flex;
+    }
+}
